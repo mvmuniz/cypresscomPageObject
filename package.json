@@ -1,0 +1,27 @@
+{
+  "name": "cypresscompageobject",
+  "version": "1.0.0",
+  "description": "cypresscompageobject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mvmuniz"
+  },
+  "keywords": [
+    "cypress",
+    "pageobject"
+  ],
+  "author": "marisamuniz",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.12.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "noGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/step_definitions"
+  }
+}
