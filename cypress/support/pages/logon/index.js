@@ -2,16 +2,22 @@
 //ações
 //acessar login
 //preencher login
-class logon{
-acessarLogin(){
-    cy.visit("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
-} 
-preencherLogin(){
-    cy.get('#Email').clear().type('admin@yourstore.com');
-    cy.get('#Password').clear().type('admin');
+
+import { ELEMENTS } from './elements';
+
+class Logon {
+    acessarLogin() {
+        cy.visit("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
+    }
+
+    preencherLogin() {
+        cy.get(ELEMENTS.emailInput).clear().type('admin@yourstore.com');
+        cy.get(ELEMENTS.passwordInput).clear().type('admin');
+    }
+
+    confirmarLogin() {
+        cy.get(ELEMENTS.loginButton).click();
+    }
 }
-confirmarLogin(){
-    cy.get('.login-button').click();
-}
-}
-export default new logon();
+
+export default new Logon();
